@@ -1,0 +1,62 @@
+{
+  "name": "web-player",
+  "version": "0.6.0",
+  "private": true,
+  "description": "A local-first browser AI video editor for voiceovers, captions, talking avatars, and multi-track timeline export.",
+  "license": "MIT",
+  "homepage": "https://video-editor.ai-creator.top/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MartinDelophy/ai-video-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MartinDelophy/ai-video-editor/issues"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "agent": "node scripts/timeline-command.mjs",
+    "preview": "vite preview --host 127.0.0.1",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:e2e:voices": "playwright test e2e/piper-languages.spec.js",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "@diffusionstudio/vits-web": "^1.0.3",
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@huggingface/transformers": "^3.8.1",
+    "@mediabunny/aac-encoder": "^1.50.8",
+    "@phosphor-icons/react": "^2.1.10",
+    "fflate": "^0.8.3",
+    "hangul-romanization": "^1.0.1",
+    "kokoro-js": "^1.2.1",
+    "mediabunny": "^1.50.8",
+    "onnxruntime-web": "^1.27.0",
+    "pinyin-pro": "^3.27.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.56.1",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^10.7.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.5",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.2",
+    "vitest": "^4.1.10"
+  }
+}

@@ -1,0 +1,32 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  base: "/cutprovideo/",
+  plugins: [react()],   // 👈 เพิ่มบรรทัดนี้
+  test: {
+    include: ["src/**/*.test.{js,jsx}"],
+    coverage: {
+      include: ["src/**/*.{js,jsx,ts,tsx}"],
+      exclude: ["src/**/*.test.*", "src/**/__fixtures__/**"],
+    },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom/client"],
+  },
+  worker: {
+    format: "es",
+  },
+  server: {
+    warmup: {
+      clientFiles: ["./src/main.jsx"],
+    },
+  },
+  preview: {
+    headers: {
+      "Cross-Origin-Opener-Policy": "same-origin",
+      "Cross-Origin-Embedder-Policy": "require-corp",
+      "Cross-Origin-Resource-Policy": "same-origin",
+    },
+  },
+});

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "timeline-studio",
+  "displayName": "Timeline Studio",
+  "version": "0.1.0",
+  "description": "Create, edit, caption, voice, assemble, validate, and export editable Timeline Studio video projects for automatic editing and local rendering.",
+  "author": {
+    "name": "MartinDelophy",
+    "url": "https://github.com/MartinDelophy"
+  },
+  "homepage": "https://video-editor.ai-creator.top/",
+  "repository": "https://github.com/MartinDelophy/ai-video-editor",
+  "license": "MIT",
+  "keywords": [
+    "video-editing",
+    "automatic-video-editing",
+    "ai-video",
+    "timeline",
+    "captions",
+    "voiceover",
+    "media"
+  ]
+}
